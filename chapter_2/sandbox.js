@@ -142,3 +142,84 @@ console.log(ninjas); // tocat added showing push edits orignal, but the concat d
 
 result = ninjas.pop(); // take off end value
 console.log(ninjas);
+
+let age2;
+console.log(age2, age2 + 3, `the age is ${age2}`);
+       // undefined NaN 'the age is undefined'
+       // age2 is auto set to undefined, age2 + 3 is NaN ect
+
+age2 = null;
+
+console.log(age2, age2 + 3, `the age is ${age2}`);
+// null, 3, age is null (no value plus 3 is 3)
+
+// booleans & comparisons
+console.log(true, false, "true", "false");
+
+// methods can return booleans
+ email = 'email@email.com'
+ result = email.includes('@');
+
+ console.log(result); // true
+
+//comparison operators
+age = 25;
+console.log(age == 25);
+console.log(age == 30);
+console.log(age != 30);
+console.log(age < 30);
+console.log(age > 30);
+console.log(age <= 25);
+
+// code showing S != s
+name = "sean"
+
+console.log(name > 'crystal') // true because s comes after c
+console.log(name > "Sean"); // true caps are less then lowercase (lowercase is greater then caps)
+console.log(name > 'Crystal') // true becasue lower are always less then caps
+
+
+age = 25 // same as before just brining it down to see it
+console.log("sting numbers vs numbers")
+console.log(age == 25);
+console.log(age == "25"); // true becasue JS converts this to a number
+
+console.log(age != 25);
+console.log(age != "25");
+
+// strict comapirson, value and type
+console.log(age === 25);
+console.log(age === "25"); // not same, ones a num and ones a string
+
+console.log(age !== 25);
+console.log(age !== "25"); // true string is not equal to num
+
+// type conversion
+score = '100'; // its a string
+
+console.log(typeof score);
+console.log(score + 1); // prints 1001, string 100 + 1
+
+score = Number(score); // make score a number
+console.log(typeof score);
+console.log(score + 1); // prints 101;
+
+// note cant turn a string like hello into a number, will get NaN
+
+result = String(50); // convert number to string
+console.log(result, typeof result);
+
+
+result = Boolean(100);
+console.log(result, typeof result); // true 'boolean'
+
+result = Boolean(0);
+console.log(result, typeof result); // false 'boolean'
+// positive OR negitive are true, 0 is false
+
+result = Boolean('0')
+console.log(result, typeof result); // strings of any length are true
+
+result = Boolean('')
+console.log(result, typeof result); // false
+
