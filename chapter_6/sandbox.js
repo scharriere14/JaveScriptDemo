@@ -28,7 +28,7 @@ para.forEach((para) => {
 });
 
 // get an element by id (reminder only one id per page, not reused like a class)
-const title = document.getElementById("page-title");
+let title = document.getElementById("page-title");
 console.log(title);
 
 // get element by class name
@@ -85,4 +85,48 @@ console.log(link.getAttribute("href")); // get the arriribute (html attribute to
 link.setAttribute("href", "https://www.rrc.ca"); // replace and set it with this value
 link.innerText = "Changed link text";
 
-const mssg = document.querySelector;
+// find the class attriblut of first p
+// worked in example but in mine it was not the first p tag so need to edit as bellow
+let mssg = document.querySelector("p");
+console.log(mssg.getAttribute("class")); // in this case tehre is no class for first p tag
+
+mssg = document.querySelector("div p.error");
+console.log(mssg.getAttribute("class"));
+
+// change attribute class name
+mssg.setAttribute("class", "success");
+mssg.setAttribute("style", "color: green;"); // changes attribute to gree text
+
+title = document.querySelector("h1");
+// title.setAttribute("style", "margin:50px"); // overrides the orignal style
+
+console.log(title.style); // list all the styles possible even if not sets
+console.log(title.style.color);
+
+// sets that specific property/style
+title.style.margin = "50px";
+title.style.color = "crimson";
+title.style.fontSize = "60px";
+
+// remove style
+title.style.margin = "";
+
+console.log(" ");
+const content2 = document.querySelector("h4");
+console.log(content2.classList); // lists all the classes that this element has
+content2.classList.add("erroring"); // add class
+content2.classList.remove("erroring"); // remove class
+
+const h3Tags = document.querySelectorAll("h3");
+h3Tags.forEach((h3) => {
+  if (h3.textContent.includes("error")) {
+    h3.classList.add("error");
+  } else if (h3.textContent.includes("success")) {
+    h3.classList.add("success");
+  }
+});
+
+// toggle class on or off
+const titleExample = document.querySelector(".title");
+titleExample.classList.toggle("test");
+titleExample.classList.toggle("test");
